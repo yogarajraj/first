@@ -1,0 +1,1337 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#malayfood,#chinisefood,#indianfood,#malaysianfruits, #malay,#chinise,#indian,#fruits {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#malayfood,#chinisefood,#indianfood,#malaysianfruits {
+    padding: 50px;
+    display: none;
+}
+
+.tiledBackground {
+  background-image: url(malaysia-waving-flag-footage-012305103_prevstill.jpeg);
+  background-size: 1000px;
+  width: 100%;
+  height: 70px;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+	width: 16.666%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: black;
+    display: none;
+    <!--padding: 50px;-->
+    text-align: center;
+}
+.tabcontent1 {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 300%;
+}
+#Home1 {background-color: black;}
+#heritage1 {background-color: black;}
+#Nautral1 {background-color: black;}
+#Beach1 {background-color: black;}
+#Shopping1 {background-color: black;}
+#Food1 {background-color: black;}
+
+#body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  padding: 30px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.column.temp  {
+  float: left;
+  width: 20%;
+}
+
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+#myMap {
+		background-color: rgba(0,0,0,0.2);
+		width: 60%;
+		height: 20%;
+		border: 2px solid black;
+		}
+		#autofill {
+				padding: 10px;
+				}
+				
+#map_canvas {height: 500px; width: 1000px; background-color: gray;)
+
+</style>
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700,inherit,400" rel="stylesheet" type="text/css">
+<!--<link rel="stylesheet" href="css/standardize.css">-->
+<link rel="stylesheet" href="css/index.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<link rel="stylesheet" href="thumbnail-gallery.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#malay").click(function(){
+        $("#malayfood").slideToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $("#chinise").click(function(){
+        $("#chinisefood").slideToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $("#indian").click(function(){
+        $("#indianfood").slideToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $("#fruits").click(function(){
+        $("#malaysianfruits").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $(".hello,#chinise,#indian,#fruits").click(function(){
+        $("#malayfood").slideUp("slow");
+    });
+});
+$(document).ready(function(){
+    $(".hello,#malay,#indian,#fruits").click(function(){
+        $("#chinisefood").slideUp("slow");
+    });
+});
+$(document).ready(function(){
+    $(".hello,#malay,#chinise,#fruits").click(function(){
+        $("#indianfood").slideUp("slow");
+    });
+});
+$(document).ready(function(){
+    $(".hello,#malay,#chinise,#indian").click(function(){
+        $("#malaysianfruits").slideUp("slow");
+    });
+});
+</script>
+</head>
+<body>
+
+<!--<p>Click on the buttons inside the tabbed menu:</p>-->
+
+<div id="Home" class="tabcontent">
+  <center>
+  <div class="tiledBackground">
+  <h3 style="color:orange; font-family:Georgia; font-style:italic; text-shadow: 5px 4px 4px black; font-size:300%; padding:0px;"><b>Welcome To Malaysia<b></h3></div>
+  <img src="topimage/topimage1.jpg" alt="Girl in a jacket" width="100%" height="300">
+  </center>
+</div>
+
+<div id="heritage" class="tabcontent">
+  <center>
+  <div class="tiledBackground">
+  <h3 style="color:orange; font-family:Georgia; font-style:italic;text-shadow: 5px 4px 4px black; font-size:300%; padding:0px;"><b>Welcome To Malaysia<b></h3></div>
+  <img src="topimage/topimage2.jpg" alt="Girl in a jacket" width="100%" height="300">
+  </center>
+</div>
+
+<div id="Natural" class="tabcontent">
+  <center>
+  <div class="tiledBackground">
+  <h3 style="color:orange; font-family:Georgia; font-style:italic;text-shadow: 5px 4px 4px black; font-size:300%; padding:0px;"><b>Welcome To Malaysia<b></h3></div>
+  <img src="topimage/topimage3.jpg" alt="Girl in a jacket" width="100%" height="300">
+  </center>
+</div>
+
+<div id="Beach" class="tabcontent">
+  <center>
+  <div class="tiledBackground">
+  <h3 style="color:orange; font-family:Georgia; font-style:italic;text-shadow: 5px 4px 4px black; font-size:300%; padding:0px;"><b>Welcome To Malaysia<b></h3></div>
+  <img src="topimage/topimage4.jpg" alt="Girl in a jacket" width="100%" height="300">
+  </center>
+</div>
+
+<div id="Shopping" class="tabcontent">
+  <center>
+  <div class="tiledBackground">
+  <h3 style="color:orange; font-family:Georgia; font-style:italic;text-shadow: 5px 4px 4px black; font-size:300%; padding:0px;"><b>Welcome To Malaysia<b></h3></div>
+  <img src="topimage/topimage5.jpg" alt="Girl in a jacket" width="100%" height="300">
+  </center>
+</div>
+
+<div id="Food" class="tabcontent">
+  <center>
+  <div class="tiledBackground">
+  <h3 style="color:orange; font-family:Georgia; font-style:italic;text-shadow: 5px 4px 4px black; font-size:300%; padding:0px;"><b>Welcome To Malaysia<b></h3></div>
+  <img src="topimage/topimage6.jpg" alt="Girl in a jacket" width="100%" height="300">
+  </center>
+</div>
+
+<button class="tablink hello" onclick="openCity('Home','Home1', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink hello" onclick="openCity('heritage','heritage1',this, 'green')">Heritage and Historical</button>
+<button class="tablink hello" onclick="openCity('Natural','Nautral1',this, 'blue')">Nature Attraction</button>
+<button class="tablink hello" onclick="openCity('Beach','Beach1',this,'orange')">Beach</button>
+<button class="tablink hello" onclick="openCity('Shopping','Shopping1',this,'purple')">Shopping</button>
+<button class="tablink" onclick="openCity('Food','Food1',this,'green')">Food</button>
+
+<div id="Home1" class="tabcontent1" style="height: 420%;">
+  <center><h3 style="font-size:600%; font-family:georgia">Selamat Datang</h3>
+         <img src="malaysiamap.jpg" alt="malaysia map" style="width:700px;height:300px;">
+   <br><br><br>
+  <p style="font-size:50px;" >Kuala Lumpur Map</p>
+  <p id='myMap'></p>
+  <br><br>
+  <p style="font-size:500%;">Tourism Malaysia</p><br>
+  <iframe width="1000" height="650" src="https://www.youtube.com/embed/qMrHRUMLJAw">
+  </iframe>
+  <br><br><br><br>
+  <iframe width="1000" height="650" src="https://www.youtube.com/embed/PxnGB5vijiE">
+  </iframe></center>
+</div>
+
+<div id="heritage1" class="tabcontent1">
+  <div id="body">
+	<h3 style="text-align:center">Slideshow Gallery</h3>
+	<div class="container">
+		<div>
+		<div class="mySlides">
+			<div class="numbertext">1 / 6</div>
+			<img src="heritage/heritage1.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">2 / 6</div>
+			<img src="heritage/heritage2.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">3 / 6</div>
+			<img src="heritage/heritage3.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">4 / 6</div>
+			<img src="heritage/heritage4.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">5 / 6</div>
+			<img src="heritage/heritage5.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">6 / 6</div>
+			<img src="heritage/heritage6.jpg" width="100%" height="450">
+		</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">?</a>
+		<a class="next" onclick="plusSlides(1)">?</a>
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+		<div class="row" style="padding-left: 15px; padding-right: 15px;">
+			<div class="column" id="Famosa(Melaka)">
+				<img class="demo cursor" src="heritage/heritage1.jpg" width="100%" height="150" onclick="currentSlide(1)" alt="Famosa(Melaka)">
+			</div>
+			<div class="column" id="Stadthuys(Melaka)">
+					<img class="demo cursor" src="heritage/heritage2.jpg" width="100%" height="150" onclick="currentSlide(2)" alt="Stadthuys(Melaka)">
+			</div>
+			<div class="column" id="Bujang Valley(Kedah)">
+					<img class="demo cursor" src="heritage/heritage3.jpg" width="100%" height="150" onclick="currentSlide(3)" alt="Bujang Valley(Kedah)">
+			</div>
+			<div class="column" id="Pagoda(Penang)">
+					<img class="demo cursor" src="heritage/heritage4.jpg" width="100%" height="150" onclick="currentSlide(4)" alt="Pagoda(Penang)">
+			</div>
+			<div class="column" id="Batu Cave(Kuala Lumpur)">
+					<img class="demo cursor" src="heritage/heritage5.jpg" width="100%" height="150" onclick="currentSlide(5)" alt="Batu Cave(Kuala Lumpur)">
+			</div>
+			<div class="column" id="Sultan Abdul Samad Building(Kuala Lumpur)">
+					<img class="demo cursor" src="heritage/heritage6.jpg" width="100%" height="150" onclick="currentSlide(6)" alt="Sultan Abdul Samad Building(Kuala Lumpur)">
+			</div>
+		</div>
+	</div>
+  </div>
+  <br><br>
+  <center><div id="map_canvas"></div></center>
+  <div class="containeer">
+    <p class="location"></p>
+    <p class="temperature"></p>
+    <div class="climate_bg"></div>
+    <div class="info_bg">
+      <img class="dropicon" src="images/Droplet.svg">
+      <p class="humidity"></p>
+
+      <img class="windicon" src="images/Wind.svg">
+      <div class="windspeed"></div>
+    </div>
+  </div>
+</div>
+
+<div id="Nautral1" class="tabcontent1">
+  <div id="body">
+	<h3 style="text-align:center">Slideshow Gallery</h3>
+	<div class="container">
+		<div>
+		<div class="mySlides">
+			<div class="numbertext">1 / 5</div>
+			<img src="natural/mount kinabalu.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">2 / 5</div>
+			<img src="natural/Mulu.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">3 / 5</div>
+			<img src="natural/gunung gading.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">4 / 5</div>
+			<img src="natural/Niah Cave.jpg" width="100%" height="450">
+		</div>
+		<div class="mySlides">
+			<div class="numbertext">5 / 5</div>
+			<img src="natural/tamannegara.jpg" width="100%" height="450">
+		</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">?</a>
+		<a class="next" onclick="plusSlides(1)">?</a>
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+		<div class="row" style="padding-left: 15px; padding-right: 15px;">
+			<div class="column temp" id="Mount kinabalu(Sabah)">
+				<img class="demo cursor" src="natural/mount kinabalu.jpg" width="100%" height="150" onclick="currentSlide(1)" alt="Famosa(Melaka)">
+			</div>
+			<div class="column temp" id="Mulu Park(Serawak)">
+					<img class="demo cursor" src="natural/Mulu.jpg" width="100%" height="150" onclick="currentSlide(2)" alt="Stadthuys(Melaka)">
+			</div>
+			<div class="column temp" id="Mount Gading(Serawak)">
+					<img class="demo cursor" src="natural/gunung gading.jpg" width="100%" height="150" onclick="currentSlide(3)" alt="Bujang Valley(Kedah)">
+			</div>
+			<div class="column temp" id="Niah Cave(Serawak)">
+					<img class="demo cursor" src="natural/Niah Cave.jpg" width="100%" height="150" onclick="currentSlide(4)" alt="Pagoda(Penang)">
+			</div>
+			<div class="column temp" id="Taman Negara(Pahang)">
+					<img class="demo cursor" src="natural/tamannegara.jpg" width="100%" height="150" onclick="currentSlide(5)" alt="Batu Cave(Kuala Lumpur)">
+			</div>
+			
+		</div>
+	</div>
+  </div>
+  <br><br>
+  <center><div id="map_canvas"></div></center>
+  <div class="containeer">
+    <p class="location"></p>
+    <p class="temperature"></p>
+    <div class="climate_bg"></div>
+    <div class="info_bg">
+      <img class="dropicon" src="images/Droplet.svg">
+      <p class="humidity"></p>
+
+      <img class="windicon" src="images/Wind.svg">
+      <div class="windspeed"></div>
+    </div>
+  </div>
+</div>
+
+<div id="Beach1" class="tabcontent1">
+  <div class="container gallery-container">
+
+    <h1>Malaysia Famous Beach</h1>
+    <div class="tz-gallery">
+		<div class="row">
+			<div class="col-sm-4 " >
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach1.jpg">
+                        <img src="img/beach1.jpg" alt="Park" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3> Long Beach, Perhentian Kecil Island, Terengganu</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 " style="display: block;">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach2.jpg">
+                        <img src="img/beach2.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3> Paya Beach, Tioman Island, Pahang</h3>                       
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 " style="display: block;">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach3.jpg">
+                        <img src="img/beach3.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Teluk Belanga Beach, Pangkor Island, Perak</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach4.jpg">
+                        <img src="img/beach4.jpg" alt="Tunnel" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3> Rawa Island Beach, Johor</h3>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach5.jpg">
+                        <img src="img/beach5.jpg" alt="Coast" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Sipadan Island Beach, Sabah</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 " style="display: block;">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach6.jpg">
+                        <img src="img/beach6.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Cenang Beach, Langkawi Island, Kedah</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach7.jpg">
+                        <img src="img/beach7.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Temasya Tanjung Batu Beach, Sarawak</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach8.jpg">
+                        <img src="img/beach8.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Pantai Cahaya Negeri Beach, Port Dickson, Negeri Sembilan</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 " style="display: block;">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach9.jpg">
+                        <img src="img/beach9.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Irama Beach, Kelantan</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach10.jpg">
+                        <img src="img/beach10.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Bagan Lalang Beach, Selangor</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4" >
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach11.jpg">
+                        <img src="img/beach11.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Pulau Redang Beach</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 " style="display: block;">
+                <div class="thumbnail">
+                    <a class="lightbox" href="img/beach12.jpg">
+                        <img src="img/beach12.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Port Dickson</h3>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+    </div>
+	</div>
+</div>
+
+<div id="Shopping1" class="tabcontent1">
+  <div class="container gallery-container" >
+
+    <h1>Malaysia Famous Shopping Mall</h1>
+    <div class="tz-gallery">
+		<div class="row">
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/IOICityMall.jpg">
+                        <img src="shoping/IOICityMall.jpg" alt="Park" style="height:200px; width:100%;" >
+                    </a>
+                    <div class="caption">
+                        <h3>IOI City Mall</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/lowyat.jpg">
+                        <img src="shoping/lowyat.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>lowyat</h3>                       
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/midvaley.jpg">
+                        <img src="shoping/midvaley.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Midvaley</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/MinesShopingMall.jpg">
+                        <img src="shoping/MinesShopingMall.jpg" alt="Tunnel" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Mines Shoping Mall</h3>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/oneutama.jpg">
+                        <img src="shoping/oneutama.jpg" alt="Coast" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>one utama Shoping Mall</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/pavillion.jpg">
+                        <img src="shoping/pavillion.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>pavillion</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/starhill.jpg">
+                        <img src="shoping/starhill.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>starhill</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/sungeiwang.jpg">
+                        <img src="shoping/sungeiwang.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>sungei wang</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/sunwaypyramid.jpg">
+                        <img src="shoping/sunwaypyramid.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>sunway pyramid</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/suriaklcc.jpg">
+                        <img src="shoping/suriaklcc.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>suria klcc</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/timessquare.jpg">
+                        <img src="shoping/timessquare.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3> times square</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="shoping/thegarden.jpg">
+                        <img src="shoping/thegarden.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>The garden</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+    </div>
+	</div>
+</div>
+
+<div id="Food1" class="tabcontent1">
+<h3 style="font-size:300%;color:yellow;"><center><b>Malaysian Food</center><b></h3><br>
+<div id="malay" style="color:white; cursor: pointer; font-family:Georgia; text-shadow: 1px 1px 4px yellow;font-size:200%; background-color:purple; border: 5px solid red; box-shadow: -1px -1px 8px yellow;"><b>Click to View Malaysian Malay Food<b></div>
+<div id="malayfood"><div class="container gallery-container">
+    <div class="tz-gallery">
+		<div class="row">
+			<div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/apambalik.jpg">
+                        <img src="food/malayfood/apambalik.jpg" alt="Park" style="height:200px; width:100%;" >
+                    </a>
+                    <div class="caption">
+                        <h3>Apam Balik</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/keropok lekor.jpg">
+                        <img src="food/malayfood/keropok lekor.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>keropok lekor</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/Ketupat.jpg">
+                        <img src="food/malayfood/Ketupat.jpg" alt="Tunnel" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Ketupat</h3>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/kuih.jpg">
+                        <img src="food/malayfood/kuih.jpg" alt="Coast" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>kuih</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/mee bandung.jpg">
+                        <img src="food/malayfood/mee bandung.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Mee Bandung</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/nasilemak.jpg">
+                        <img src="food/malayfood/nasilemak.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Nasi Lemak</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/satay.jpg">
+                        <img src="food/malayfood/satay.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>satay</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/malayfood/bahulu.jpg">
+                        <img src="food/malayfood/bahulu.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Bahulu</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+    </div>
+	</div></div> 
+	<br><br>
+	<div id="chinise" style="color:white; cursor: pointer; font-family:Georgia; text-shadow: 1px 1px 4px yellow;font-size:200%; background-color:purple; border: 5px solid red; box-shadow: -1px -1px 8px yellow;"><b>Click to View Malaysian Chinise Food<b></div>
+	<div id="chinisefood"><div class="container gallery-container">
+    <div class="tz-gallery">
+		<div class="row">
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/charkuytheow.jpg">
+                        <img src="food/chinisefood/charkuytheow.jpg" alt="Park" style="height:200px; width:100%;" >
+                    </a>
+                    <div class="caption">
+                        <h3>Char Kuy Theow</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/chicken rice.jpg">
+                        <img src="food/chinisefood/chicken rice.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>chicken rice</h3>                       
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/clypotchickenrice.jpg">
+                        <img src="food/chinisefood/clypotchickenrice.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>clypot chicken rice</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/crispynodles.jpg">
+                        <img src="food/chinisefood/crispynodles.jpg" alt="Tunnel" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>crispy nodles</h3>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/CurryLaksa.jpg">
+                        <img src="food/chinisefood/CurryLaksa.jpg" alt="Coast" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Curry Laksa</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/dim sum.jpg">
+                        <img src="food/chinisefood/dim sum.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Dim Sum</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/fried-rice.jpg">
+                        <img src="food/chinisefood/fried-rice.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>fried rice</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/HokkienMee.jpg">
+                        <img src="food/chinisefood/HokkienMee.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Hokkien Mee</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/Chilli Chicken.jpg">
+                        <img src="food/chinisefood/Chilli Chicken.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Dry Chilli Chicken</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/Pau.jpg">
+                        <img src="food/chinisefood/Pau.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Pau</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/BakKutTeh.jpg">
+                        <img src="food/chinisefood/BakKutTeh.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Bak Kut Teh</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/chinisefood/yongtoufoo.jpg">
+                        <img src="food/chinisefood/yongtoufoo.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Yong Tou Foo</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+	</div></div> 
+	<br><br>
+	<div id="indian" style="color:white; cursor: pointer; font-family:Georgia; text-shadow: 1px 1px 4px yellow;font-size:200%; background-color:purple; border: 5px solid red; box-shadow: -1px -1px 8px yellow;"><b>Click to View Malaysian Indian Food<b></div>
+	<div id="indianfood"><div class="container gallery-container">
+    <div class="tz-gallery">
+		<div class="row">
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/bananaleaf.jpg">
+                        <img src="food/indianfood/bananaleaf.jpg" alt="Park" style="height:100px; width:100%;" >
+                    </a>
+                    <div class="caption">
+                        <h3>Banana Leaf</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/chapati.jpg">
+                        <img src="food/indianfood/chapati.jpg" alt="Bridge" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>chapati</h3>                       
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/chicken briyani.jpg">
+                        <img src="food/indianfood/chicken briyani.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Chicken Briyani</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/dosa.jpg">
+                        <img src="food/indianfood/dosa.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>dosai</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/chickenvaruval.jpg">
+                        <img src="food/indianfood/chickenvaruval.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Chicken Varuval</h3>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/fishheadcurry.jpg">
+                        <img src="food/indianfood/fishheadcurry.jpg" alt="Coast" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Fish Head Curry</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/idli.jpg">
+                        <img src="food/indianfood/idli.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>idli</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/indiansnacks.jpg">
+                        <img src="food/indianfood/indiansnacks.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Snacks(Vadai,Bonda,Pakoda)</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/kothupratha.jpg">
+                        <img src="food/indianfood/kothupratha.jpg" alt="Rails" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Kothu Pratha/Roti Goreng</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/mee goreng.jpg">
+                        <img src="food/indianfood/mee goreng.jpg" alt="Traffic" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Mee Goreng(Fried Nodle)</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/magee goreng.jpg">
+                        <img src="food/indianfood/magee goreng.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Magee Goreng(Fried Magee)</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/rotichanai.jpg">
+                        <img src="food/indianfood/rotichanai.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Roti chanai</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/murtabak.jpg">
+                        <img src="food/indianfood/murtabak.jpg" alt="Rails" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Murtabak</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/poori.jpg">
+                        <img src="food/indianfood/poori.jpg" alt="Traffic" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Poori</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/putumayam.jpg">
+                        <img src="food/indianfood/putumayam.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>putu mayam</h3>                        
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-3 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/indianfood/rotinaan.jpg">
+                        <img src="food/indianfood/rotinaan.jpg" alt="Tunnel" style="height:100px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Roti Naan</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+    </div>
+	</div></div>
+	<br><br>
+	<div id="fruits" style="color:white; cursor: pointer; font-family:Georgia; text-shadow: 1px 1px 4px yellow;font-size:200%; background-color:purple; border: 5px solid red; box-shadow: -1px -1px 8px yellow;"><b>Click to View Malaysian Fruits<b></div>
+	<div id="malaysianfruits"><div class="container gallery-container">
+    <div class="tz-gallery">
+		<div class="row">
+			<div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/fruits/durian.png">
+                        <img src="food/fruits/durian.png" alt="Park" style="height:200px; width:100%;" >
+                    </a>
+                    <div class="caption">
+                        <h3>Durian</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/fruits/chempedak.jpg">
+                        <img src="food/fruits/chempedak.jpg" alt="Bridge" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Chempedak</h3>                       
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/fruits/chikoo.jpg">
+                        <img src="food/fruits/chikoo.jpg" alt="Tunnel" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Chikoo</h3>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/fruits/langsat.jpg">
+                        <img src="food/fruits/langsat.jpg" alt="Coast" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Langsat</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/fruits/mata kuching.jpg">
+                        <img src="food/fruits/mata kuching.jpg" alt="Rails" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Mata Kuching</h3>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="thumbnail">
+                    <a class="lightbox" href="food/fruits/rambutan.jpg">
+                        <img src="food/fruits/rambutan.jpg" alt="Traffic" style="height:200px; width:100%;">
+                    </a>
+                    <div class="caption">
+                        <h3>Rambutan</h3>                        
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+    </div>
+	</div></div>
+</div>
+</body>
+
+<script>
+function openCity(PageName,PageName1,elmnt,color) {
+    var i, tabcontent,tabcontent1, tablinks; 
+	var z=1;
+    tabcontent = document.getElementsByClassName("tabcontent");
+	tabcontent1 = document.getElementsByClassName("tabcontent1");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+		tabcontent1[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(PageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+	document.getElementById(PageName1).style.display = "block";
+    elmnt.style.backgroundColor = color;
+	page=PageName1;
+	currentSlide(z);
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementById(page).children[0].children[1].children[0].children;
+  var dots = document.getElementById(page).children[0].children[1].children[4].children;
+  var captionText = document.getElementById(page).children[0].children[1].children[3].children[0];
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].children[0].className = dots[i].children[0].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].children[0].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].id;
+  var m=3;
+  if(slideIndex == 1){if (page == "heritage1" ){ var latval = 2.4466; var lngval = 102.2092;z="malacca,malaysia";}
+	else{var latval = 5.9714; var lngval = 116.0952; z = "kota kinabalu,malaysia"; }
+	}else if(slideIndex == 2){if (page == "heritage1" ){var latval = 2.1942; var lngval = 102.2496; z="malacca,malaysia";} else {var latval = 4.0921; var lngval = 114.8958; z = "Miri,malaysia";}
+	}else if(slideIndex == 3){if (page == "heritage1" ){var latval = 5.7381; var lngval = 100.4145; z="lembah bujang,malaysia";} else {var latval = 1.7333; var lngval = 109.8333; z = "Lundu,malaysia";}
+    }else if(slideIndex == 4){if (page == "heritage1" ){var latval = 5.3982; var lngval = 100.2728; z="penang,malaysia";} else {var latval = 3.8014; var lngval = 113.7841; z = "Miri,malaysia";}
+	}else if(slideIndex == 5){if (page == "heritage1" ){var latval = 3.2379; var lngval = 101.6840; z="gombak,malaysia";} else {var latval = 2.438915 ; var lngval = 103.272858; z = "Kuala Tahan,malaysia";}
+	}else {var latval = 3.1487; var lngval = 101.6944; z ="kuala lumpur,malaysia";}
+    var mapOptions = {
+        zoom: 10,
+        center: new google.maps.LatLng(latval, lngval),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById(page).children[3].children[0], mapOptions);
+	mycenter = new google.maps.LatLng(latval, lngval);
+	var marker = new google.maps.Marker({position:mycenter});
+	marker.setMap(map);
+	loadWeather (z, "");
+	$(document).ready (function(){
+	setInterval(loadWeather,10000);
+	});
+	function loadWeather (location, woeid) {
+	$.simpleWeather ({
+	location: location,
+	woeid: woeid,
+	unit: 'c',
+	success: function(weather){
+	city = weather.city;
+	temp = weather.temp+'&deg;';
+	wcode = '<img class="weathericon" src= "images/weathericons/' + weather.code + '.svg">';
+	wind = '<p>'  + weather.wind.speed + '</p><p>'+ weather.units.speed +'</p>';
+	humidity = weather.humidity + ' %';
+	$(".location").text(city);
+	$(".temperature").html(temp);
+	$(".climate_bg").html(wcode);
+	$(".windspeed").html(wind);
+	$(".humidity").text(humidity);
+	},
+	error: function(error){
+	$(".error").html('<p>' + error + '</p>');
+	}
+
+	});
+	}
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZjLkQbRgHuC1-U7Zh3MWRPEOUQ9azLWA&libraries=places&callback=initAutocomplete" async defer></script> 
+<script>z="kuala lumpur, malaysia";</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=geometry&libraries=places"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+	<script>
+			function initMap() {
+				lastMarker = new google.maps.LatLng(3.1390, 101.6869);	// pulau tioman
+				var mapOptions = {
+					zoom: 9,
+					center: lastMarker
+				}
+				map = new google.maps.Map(document.getElementById('myMap'), mapOptions);
+				
+				// auto complete
+				var autocomplete = new google.maps.places.Autocomplete((document.getElementById('new_dest_name_')),{ types: ['geocode'] });
+				google.maps.event.addListener(autocomplete, 'place_changed', function() {
+					var place = autocomplete.getPlace();
+					// show lat lng
+					document.getElementById('new_dest_lat_').value = place.geometry.location.lat();
+					document.getElementById('new_dest_lng_').value = place.geometry.location.lng();
+					
+					// set map new location
+					var pt = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+					map.setCenter(pt);
+					map.setZoom(16);
+				});
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initMap);
+		</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+</body>
+</html>    
+</body>
+</html> 
